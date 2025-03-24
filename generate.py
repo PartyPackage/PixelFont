@@ -13,17 +13,19 @@ def chunks(lst, n):
 codes = [chr(x) for x in range(0x100, 0x100 + 0xFFF + 1)]
 print(len(codes))
 
-advances = {}
+advances = {
+    " ": -1
+}
 for x in codes:
-    advances[x] = 1
+    advances[x] = 10
 
 font = {
     "providers" : [
         {
             "type": "bitmap",
             "file": "lfx:font/pxl.png",
-            "ascent": 8,
-            "height": 8,
+            "ascent": 3,
+            "height": 10,
             "chars": list(chunks(codes, 64)) # 64x64 palette image
         },
         {

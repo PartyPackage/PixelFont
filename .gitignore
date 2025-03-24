@@ -162,3 +162,10 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+/.idea/.gitignore
+/.idea/.name
+/.idea/jsonSchemas.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/PixelFont.iml
+/.idea/inspectionProfiles/profiles_settings.xml
