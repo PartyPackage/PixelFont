@@ -6,10 +6,11 @@ import math
 
 
 def rgb_to_hex(rgb: tuple):
-    r = hex(math.floor(rgb[0] / 16))[2:]
-    g = hex(math.floor(rgb[1] / 16))[2:]
-    b = hex(math.floor(rgb[2] / 16))[2:]
-    return chr(int(f"0x{b}{g}{r}", 16) + 0x100)
+    r = math.floor(rgb[0] / 16)
+    g = math.floor(rgb[1] / 16)
+    b = math.floor(rgb[2] / 16)
+    pxl = ((b * (16 * 16)) + (g * 16) + r) + 0x100
+    return chr(pxl)
 
 
 img = PIL.Image.open("test.png")
