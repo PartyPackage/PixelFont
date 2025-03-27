@@ -10,7 +10,7 @@ def chunks(lst, n):
     using 0xFFF so that it's 0xBGR, giving us 4096 possible colors
     starting at 0x100 to avoid weird formatting codes
 '''
-codes = [chr(x) for x in range(0x100, 0x100 + 0xFFF + 1)]
+codes = [chr(x) for x in range(0xFFF, 0xFFF + 0xFFF + 1)]
 print(len(codes))
 
 advances = {

@@ -2,18 +2,17 @@ import json
 import time
 
 import PIL.Image
-import math
 
 
 def rgb_to_hex(rgb: tuple):
-    r = math.floor(rgb[0] / 16)
-    g = math.floor(rgb[1] / 16)
-    b = math.floor(rgb[2] / 16)
-    pxl = ((b * (16 * 16)) + (g * 16) + r) + 0x100
+    r = round(rgb[0] / 16)
+    g = round(rgb[1] / 16)
+    b = round(rgb[2] / 16)
+    pxl = ((b * (16 * 16)) + (g * 16) + r) + 0xFFF
     return chr(pxl)
 
 
-img = PIL.Image.open("test.png")
+img = PIL.Image.open("pxl.png")
 if img.mode != "RGB":
     img = img.convert("RGB")
     print("converted image to RGB mode")
@@ -21,10 +20,13 @@ if img.mode != "RGB":
 pixels = img.load()
 
 start = time.process_time()
-chars = []
-for x in range(img.width):
-    for y in range(img.height):
-        chars.append(rgb_to_hex(pixels[x,y]))
+
+chars = [rgb_to_hex(x) for x in img.getdata()]
+for i in range(len(chars)):
+    if i+1 == len(chars):
+        break
+    if ord(chars[i+1]) - ord(chars[i]) != 1:
+        print(f"{chars[i]}, {chars[i+1]}")
 
 rows = []
 while len(chars) >= img.width:
