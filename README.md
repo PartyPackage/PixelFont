@@ -14,9 +14,9 @@ The typical approach would be to use a unicode full block character (█, U+2588
 /summon minecraft:text_display ~ ~2 ~ {text: [{color: "#e01b24", text: "█"}, {color: "#33ee55", text: "█"}, {color: "#3584e4", text: "█"}]}
 ```
 
-The size of the overall json object can quickly exceed Minecraft's maximum packet size with even the smallest of images using this approach.
+Although this allows you to use 24 bit color, the size of the overall json object can quickly exceed Minecraft's maximum packet size with even the smallest of images using this approach.
 
-The size of the json object is much smaller when using the font approach, as each pixel does not need to be its own json object. The only additional data included is specifying the font of the text.
+The size of the json object is much smaller when using the font approach, as each pixel does not need to be its own json object. The only additional data included is specifying the custom font with the unicode characters.
 
 ```
 /summon minecraft:text_display ~ ~2 ~ {text: {font: "lfx:pxl", text: "\u100e \u10ef \u1eff "}}
@@ -28,3 +28,7 @@ Using this approach, I was able to stream 4k video to players on a server withou
 This technology was used in my custom DMX controlled lighting plugin, MCLiveFX, for [Bundle Group's](https://bundlegroup.gg/) Coasters and Crafters Live [night club events](https://www.twitch.tv/videos/2555123854?t=00h07m58s). The font was used for the pixel mapped RGB matrices above the crowd.
 
 (EPILEPSY WARNING)
+
+https://github.com/user-attachments/assets/997e499b-1da5-4f5b-b3fd-9ba97b4841c9
+
+If you wish to work with us to bring your ideas to life, feel free to contact us via the [Bundle Group website](https://bundlegroup.gg/)
