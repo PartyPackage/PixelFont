@@ -18,7 +18,7 @@ The typical approach would be to use a unicode full block character (█, U+2588
 Although this allows you to use 24 bit color, the size of the overall json object can quickly exceed Minecraft's maximum packet size with even the smallest of images using this approach.
 
 ### New Approach
-The size of the json object is much smaller when using the font approach, as each pixel does not need to be its own json object. The only additional data included is specifying the custom font with the unicode characters.
+The size of the json object is much smaller when using the font, as each pixel does not need to be its own json object. The only additional data included is specifying the custom font with the unicode characters.
 
 ```
 /summon minecraft:text_display ~ ~2 ~ {text: {font: "lfx:pxl", text: "\u100e \u10ef \u1eff "}}
