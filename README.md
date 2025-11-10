@@ -25,10 +25,10 @@ The size of the json object is much smaller when using the font approach, as eac
 Using this approach, I was able to stream 4k video to players on a server without exceeding the maximum packet size. The main drawback of this approach is client performance. Even though you can stream 4k video to players, it will lag their games to 1-3fps. For lower resolution video, it is feasible to stream to many players on a server.
 
 ## Case Study
-This technology was used in my custom DMX controlled lighting plugin, MCLiveFX, for [Bundle Group's](https://bundlegroup.gg/) Coasters and Crafters Live [night club events](https://www.twitch.tv/videos/2555123854?t=00h07m58s). The font was used for the pixel mapped RGB matrices above the crowd.
+This technology was used in my custom DMX controlled lighting plugin, MCLiveFX, for [Bundle Group's](https://bundlegroup.gg/) Coasters and Crafters Live night club events [(Twitch VOD)](https://www.twitch.tv/videos/2555123854?t=00h07m58s). The font was used for the pixel mapped RGB matrices above the crowd.
 
 (EPILEPSY WARNING)
 
 https://github.com/user-attachments/assets/997e499b-1da5-4f5b-b3fd-9ba97b4841c9
 
-If you wish to work with us to bring your ideas to life, feel free to contact us via the [Bundle Group website](https://bundlegroup.gg/)
+If you wish to work with us to bring your ideas to life, feel free to contact us via the [Bundle Group website!](https://bundlegroup.gg/)
