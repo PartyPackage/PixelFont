@@ -8,6 +8,7 @@ This font makes it feasible to stream video content to many players on a minecra
 
 This approach is still vastly more efficient than the typical method of displaying a colored pixel in a text display.
 
+### Old Approach
 The typical approach would be to use a unicode full block character (█, U+2588) and color it via a tag in the entity's json object.
 
 ```
@@ -16,6 +17,7 @@ The typical approach would be to use a unicode full block character (█, U+2588
 
 Although this allows you to use 24 bit color, the size of the overall json object can quickly exceed Minecraft's maximum packet size with even the smallest of images using this approach.
 
+### New Approach
 The size of the json object is much smaller when using the font approach, as each pixel does not need to be its own json object. The only additional data included is specifying the custom font with the unicode characters.
 
 ```
