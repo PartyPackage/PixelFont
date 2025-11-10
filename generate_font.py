@@ -7,11 +7,10 @@ def chunks(lst, n):
 
 
 '''
-    using 0xFFF so that it's 0xBGR, giving us 4096 possible colors
-    starting at 0x100 to avoid weird formatting codes
+    Each pixel is represented as 0xBGR, giving us 4096 possible colors.
+    Starting at 0xFFF to avoid weird formatting codes.
 '''
 codes = [chr(x) for x in range(0xFFF, 0xFFF + 0xFFF + 1)]
-print(len(codes))
 
 advances = {
     " ": -1
@@ -37,3 +36,4 @@ font = {
 
 with open('pxl.json', 'w', encoding='utf8') as f:
     json.dump(font, f, ensure_ascii=True, indent=4)
+    print("generated font: pxl.json")
