@@ -30,6 +30,9 @@ Using this approach, I was able to stream 4k video to players on a server withou
 I created a script early on into testing that generates a command which summons a text display entity of whatever image you would like to display. You can use this script as well to quickly generate commands to spawn custom text display art in your worlds. Make sure to keep in mind the maximum command size of command blocks will dictate the maximum resolution of your image.
 <img width="854" height="480" alt="image" src="https://github.com/user-attachments/assets/f150d0ab-4866-4eb5-b518-1cedb5272c55" />
 
+Of course I had to do the obligatory Bad Apple showcase with it as well. Here is a recording from a friend's perspective with all video and audio being streamed over WAN, with hundreds of miles between us and the game server as well. We build a web based audio client to accompany the video being streamed in-game and the latency stacks almost perfectly together creating a seamless viewing experience.
+
+https://github.com/user-attachments/assets/45439cc7-9d30-4b3e-852e-9424c1d0508f
 
 ## Case Study
 This technology was used in my custom DMX controlled lighting plugin, MCLiveFX, for [Bundle Group's](https://bundlegroup.gg/) Coasters and Crafters Live night club events [(Twitch VOD)](https://www.twitch.tv/videos/2555123854?t=00h07m58s). The font was used for the pixel mapped RGB matrices above the crowd.
