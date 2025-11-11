@@ -17,6 +17,8 @@ One approach would be to use a unicode full block character (█, U+2588) and co
 
 Although this allows you to use 24 bit color, the size of the overall json object can quickly exceed Minecraft's maximum packet size with even the smallest of images using this approach. Another approach, as explored by [Cymaera](https://www.youtube.com/watch?v=uZmEYYs0ZKs), would be to use a single text entity per pixel. Each pixel would be a blank character and the color of the pixel would be determined by the background color and alpha value of the text display's background. As shown by Cymaera, this is a very powerful approach as you can use 24 bit color and an alpha channel, but has the drawback of using tons of entities to acheive an end result.
 
+---
+
 ### New Approach
 With using fonts, you can keep displays as one entity, but be limited to only 12 bit color and no alpha channel. The size of the json object is much smaller when using the font, as each pixel does not need to be its own json object. The only additional data included is specifying the custom font with the unicode characters.
 
@@ -28,7 +30,10 @@ Using this approach, I was able to stream 4k video to players on a server withou
 
 ## Display Anything
 I created a script early on into testing that generates a command which summons a text display entity of whatever image you would like to display. You can use this script as well to quickly generate commands to spawn custom text display art in your worlds. Make sure to keep in mind the maximum command size of command blocks will dictate the maximum resolution of your image.
+
 <img width="854" height="480" alt="image" src="https://github.com/user-attachments/assets/f150d0ab-4866-4eb5-b518-1cedb5272c55" />
+
+---
 
 Of course I had to do the obligatory Bad Apple showcase with it as well. Here is a recording from a friend's perspective with all video and audio being streamed over WAN, with hundreds of miles between us and the game server as well. We build a web based audio client to accompany the video being streamed in-game and the latency stacks almost perfectly together creating a seamless viewing experience.
 

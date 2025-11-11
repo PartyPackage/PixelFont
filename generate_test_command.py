@@ -14,9 +14,10 @@ import PIL.Image
 
 def rgb_to_char(rgb: tuple):
     r = round(rgb[0] / 16)
-    g = round(rgb[1] / 16)
-    b = round(rgb[2] / 16)
-    pxl = ((b * (16 * 16)) + (g * 16) + r) + 0xFFF
+    g = round(rgb[1] / 16) << 4
+    b = round(rgb[2] / 16) << 8
+
+    pxl = r + g + b + 0xFFF
     return chr(pxl)
 
 

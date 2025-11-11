@@ -15,9 +15,9 @@ from PIL import Image
 def int_to_rgb(i):
     # multiply values by 16 to scale to 24 bit color values
     # subtract 1 so values are within range of 0-255
-    r = (i & 0x0F) * 16
-    g = ((i >> 4) & 0x0F) * 16
-    b = ((i >> 8) & 0x0F) * 16
+    r = (i & 0xF) * 16
+    g = ((i >> 4) & 0xF) * 16
+    b = ((i >> 8) & 0xF) * 16
 
     return (r,g,b)
 
