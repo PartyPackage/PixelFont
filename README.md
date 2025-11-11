@@ -28,6 +28,7 @@ Using this approach, I was able to stream 4k video to players on a server withou
 
 ## Display Anything
 I created a script early on into testing that generates a command which summons a text display entity of whatever image you would like to display. You can use this script as well to quickly generate commands to spawn custom text display art in your worlds. Make sure to keep in mind the maximum command size of command blocks will dictate the maximum resolution of your image.
+<img width="854" height="480" alt="image" src="https://github.com/user-attachments/assets/f150d0ab-4866-4eb5-b518-1cedb5272c55" />
 
 
 ## Case Study
