@@ -34,14 +34,14 @@ chars = [rgb_to_char(x) for x in img.getdata()]
 """
 rows = []
 while len(chars) >= img.width:
-    row = []
+    row = [""]
     for c in range(img.width):
         row.append(chars.pop(0))
 
-    rows.append(" ".join(row) + "\n")
+    rows.append(" ".join(row) + " \n")
 
 text = json.dumps("".join(rows))
-command = f"/summon minecraft:text_display ~ ~2 ~ {{line_width: 2056, text: {{font: \"lfx:pxl\", text: {text}}}}}"
+command = f"/summon minecraft:text_display ~ ~2 ~ {{line_width: 2056, text: {{font: \"lfx:pxl\", text: {text[:-3] + "\""}}}}}" # it's hacky, i know
 
 with open("test_command.txt", "w") as f:
     f.write(command)

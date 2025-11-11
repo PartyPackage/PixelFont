@@ -35,7 +35,7 @@ font = {
         {
             "type": "bitmap",
             "file": "lfx:font/pxl.png",
-            "ascent": 3,
+            "ascent": 8,
             "height": 10,
             "chars": list(chunks(codes, 64)) # 64x64 palette image
         },
